@@ -1,6 +1,7 @@
+package JavaSolutions;
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.math.BigInteger;
+
+import static java.lang.System.exit;
 
 /**
  * Created by laptop on 10/01/2023
@@ -12,7 +13,7 @@ public class Euler3
    {
       for (long i = 2; i<=x /2; i++)
       {
-         if(x%i ==0)
+         if(x%i == 0)
          {
             return false;
          }
@@ -25,13 +26,15 @@ public class Euler3
       long origin = 600851475143L;
       double denominator;
 
-      for (denominator=1; denominator < origin/2;denominator++)
+      for (denominator = 1; denominator < origin / 2.0; denominator++)
       {
          double result = origin/denominator;
-         //System.out.println(result);
+
+         //checks if result is an int first, as this speeds up the process
          if (result == (int)result && is_Prime(result))
          {
             System.out.println(result);
+            exit(1);
          }
       }
    }

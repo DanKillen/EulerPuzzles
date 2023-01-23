@@ -1,3 +1,5 @@
+package JavaSolutions;
+
 import java.io.IOException;
 
 import static java.lang.System.exit;
@@ -9,11 +11,12 @@ import static java.lang.System.exit;
  **/
 public class Euler9
 {
+   //This function will check the integers given against the criteria
    static boolean isAnswer(int x, int y, int z)
    {
          if(x*x + y*y == z*z && x + y + z == 1000)
          {
-            System.out.println("x = " + x + ". y = " + y + ". z = " + z);
+            System.out.println("x = " + x + " y = " + y + " z = " + z);
             System.out.println(x * y * z);
             exit(1);
          }
@@ -21,6 +24,8 @@ public class Euler9
    }
    public static void main(String[] args) throws IOException
    {
+      //main will loop over integers until the answer is given
+      //program will exit before bool expression is confirmed
       boolean finished = false;
       for (int x = 1; !finished; x++)
       {
